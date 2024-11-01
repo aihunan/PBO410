@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Kelas Utama: Restoran
 public class Restourant {
     private String namaRestoran;
     private Menu[] menus;
@@ -67,7 +66,6 @@ public class Restourant {
     public void prosesPesanan() {
         Scanner scanner = new Scanner(System.in);
 
-        // Menampilkan menu
         displayMenu();
 
         System.out.print("Pilih nomor menu: ");
@@ -79,7 +77,6 @@ public class Restourant {
         System.out.print("Tipe Pesanan (dine-in/take-away): ");
         String tipePesanan = scanner.next();
 
-        // Membuat pesanan
         Pesanan pesanan = new Pesanan(namaPelanggan, menus[pilihanMenu], tipePesanan);
         tambahPesanan(pesanan);
         System.out.println("Pesanan berhasil dicatat!");
